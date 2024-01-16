@@ -1,10 +1,11 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
+import logger from 'koa-logger'
 
+import * as Data from "./data";
+import {Service} from"./data";
 
-// Config
-const PORT: number = Number(process.env.PORT) || 5000;
 
 // Create server
 const app = new Koa();
@@ -12,17 +13,21 @@ const router = new Router();
 
 // Middleware
 // Parse request bodies as JSON
+app.use(logger())
 app.use(bodyParser());
 app.use(router.routes());
 app.use(router.allowedMethods());
 
 // Routes
 router.get('/', async (ctx) => {
-  ctx.body = 'Hello, world';
+  ctx.body = 'success'
 });
 
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+router.get('/address/:address/balance', async (ctx) => {
+  console.log("get balance")
+  ctx.body = { balance: 123 }
+  // const address = ctx.params.address
+  // ctx.body = Service.getBalance(address)
 });
+
+export { app}

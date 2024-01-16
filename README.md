@@ -13,3 +13,5 @@ Clone the repo, and run the instructions below.
 $ npm install
 $ npm start
 ```
+
+Your server will automatically restart if the source code changes.
