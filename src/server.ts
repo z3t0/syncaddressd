@@ -25,9 +25,11 @@ router.get('/', async (ctx) => {
 
 router.get('/address/:address/balance', async (ctx) => {
   console.log("get balance")
-  ctx.body = { balance: 123 }
-  // const address = ctx.params.address
-  // ctx.body = Service.getBalance(address)
+
+  const address = ctx.params.address
+  console.log({params: ctx.params})
+  ctx.body = { balance:  await Service.getBalance(address) }
 });
+
 
 export { app}

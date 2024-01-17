@@ -13,7 +13,7 @@ describe('GET /', () => {
 describe('GET /address/balance', () => {
   it('balance should be a number', async () => {
 
-    const address = "123"
+    const address = "1AJbsFZ64EpEfS5UAjAfcUG8pH8Jn3rn1F"
     const response = await fetch(`${base()}/address/${address}/balance`);
     expect(response.status).toBe(200);
 
