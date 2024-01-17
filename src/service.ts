@@ -8,13 +8,11 @@ async function getAddressInfo(address: string) : Promise<AddressInfo> {
     return getDb()[address] as AddressInfo
   }
   else {
-    throw new Error("miss")
-    
     console.log('miss: ' + address)
 
     const blockchainServiceUrl = "https://blockchain.info/"
 
-    const res = await fetch (`${blockchainServiceUrl}/rawaddr/${address}]`)
+    const res = await fetch (`${blockchainServiceUrl}/rawaddr/${address}`)
 
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}, Status Text: ${res.statusText}`);

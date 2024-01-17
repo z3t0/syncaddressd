@@ -3,8 +3,7 @@ import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
 import logger from 'koa-logger'
 
-import * as Data from "./data";
-import {Service} from"./data";
+import {Service} from"./service";
 
 // Config
 const PORT: number = Number(process.env.PORT) || 5000;
@@ -27,9 +26,10 @@ router.get('/', async (ctx) => {
 
 router.get('/address/:address/balance', async (ctx) => {
   console.log("get balance")
+  console.log({params: ctx.params})
 
   const address = ctx.params.address
-  console.log({params: ctx.params})
+
   ctx.body = { balance:  await Service.getBalance(address) }
 });
 
