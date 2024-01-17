@@ -1,5 +1,3 @@
-import {app} from '../src/server'; // Import your Koa.js app instance
-
 function base() { return 'http://localhost:5000' }
 
 describe('GET /', () => {

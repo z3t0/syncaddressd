@@ -6,6 +6,8 @@ import logger from 'koa-logger'
 import * as Data from "./data";
 import {Service} from"./data";
 
+// Config
+const PORT: number = Number(process.env.PORT) || 5000;
 
 // Create server
 const app = new Koa();
@@ -31,5 +33,7 @@ router.get('/address/:address/balance', async (ctx) => {
   ctx.body = { balance:  await Service.getBalance(address) }
 });
 
-
-export { app}
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
