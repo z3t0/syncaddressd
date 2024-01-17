@@ -66,3 +66,17 @@ Your server will automatically restart if the source code changes.
 - My development environment is running on a debian vm that I am connected to from my Windows thinkpad. I am using mosh + tmux + emacs
 - Oh also I'm using fish for my shell for its autocomplete, which makes things a lot faster at times.
 - I've got a few screenshots below so this is easier to visualise.
+- I'm flexible to use any tool/system though :) Just wanted to share what is currently working for me.
+- I also have a linux server workstation, macbook pro and windows VMs at home. I like to stay in the loop as different customers will use different systems, and you can always learn something from new tools.
+- I'll stop here for now then :) I can definitely go on and on about all the tools I like to learn and new ways of making work efficient and fun.
+
+#### Editing this readme 
+![image](https://github.com/z3t0/syncaddressd/assets/9000061/fa31778d-898e-43d2-aac0-5581d2e98138)
+
+
+#### Debugging a failing test
+![image](https://github.com/z3t0/syncaddressd/assets/9000061/96a4586a-d57a-4e17-89e6-f57089a84140)
+
+#### All tests are passing now
+![image](https://github.com/z3t0/syncaddressd/assets/9000061/b121819b-ca98-4e06-aab0-e6d9605ce5a0)
+
