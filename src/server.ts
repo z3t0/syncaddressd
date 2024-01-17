@@ -33,6 +33,15 @@ router.get('/address/:address/balance', async (ctx) => {
   ctx.body = { balance:  await Service.getBalance(address) }
 });
 
+router.get('/address/:address/transactions', async (ctx) => {
+  console.log("get transactions")
+  console.log({params: ctx.params})
+
+  const address = ctx.params.address
+
+  ctx.body = { transactions:  await Service.getTransactions(address) }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
